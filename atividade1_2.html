@@ -18,43 +18,36 @@
         var idade = Number(prompt("Digite sua idade"));
 
         var abonoMeses = 0;
-        var salfinal = 0;
-        var inss = 0
+        var salFinal = 0;
+        var inss = 0;
 
-        if(mesesTrab > 11)
-        {
-            abonoMeses = salario*10/100;
+        if (mesesTrab > 11) {
+            abonoMeses = salario * 10 / 100;
             abonoMeses = abonoMeses + idade;
         }
-        else{abonoMeses= idade}
+        else { abonoMeses = idade };
 
-        salfinal = abonoMeses+salario;
-    
-        if(salfinal <= 1500)
-        {
-        inss = salfinal*5/100;
-        }else if(salfinal >1500 && salfinal <= 2500)
-        {
-        inss = salfinal*10/100
-        }else if (salfinal >2500 && salfinal<= 3500)
-        {
-        inss = salfinal*13/100;
-        }else if (salfinal>3500)
-        {
-        inss = salfinal=15/100;
+        salFinal = abonoMeses + salario;
+
+        if (salFinal <= 1500) {
+            inss = salFinal * 5 / 100;
+        } else if (salFinal > 1500 && salFinal <= 2500) {
+            inss = salFinal * 10 / 100;
+        } else if (salFinal > 2500 && salFinal <= 3500) {
+            inss = salFinal * 13 / 100;
+        } else if (salFinal > 3500) {
+            inss = salFinal * 15 / 100;
         }
 
-        output.innerHTML = `Nome: ${nome}
-        <br> Tempo de serviço: ${mesesTrab}
-        <br>Salário médio: ${salario}<br>Idade ${idade}<hr>
-        Abono salarial: ${abonoMeses}
-        <br>Salario final: ${salfinal}`;
+        output.innerHTML = `Nome: ${nome}<br> 
+        Tempo de serviço: ${mesesTrab}<br>
+        Salário médio: ${salario}<br>
+        Idade ${idade}<hr>
+        Abono salarial: ${abonoMeses}<br>
+        Salario final: ${salFinal}<br>
+        Contribuição para INSS: ${inss}`;
 
     </script>
-
-
-
-
 </body>
 
 </html>
