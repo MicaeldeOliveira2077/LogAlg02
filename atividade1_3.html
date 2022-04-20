@@ -10,7 +10,7 @@
 
 <body>
 
-<!-- 
+    <!-- 
     IMPORTANTE!
         • Esta atividade pressupõe que você tenha conhecimentos básicos de HTML5 e de JavaScript.
         • Todos os elementos essenciais para o funcionamento do programa estão identificados (id="").
@@ -116,7 +116,7 @@
             var tempoServiço = Number(serviceTime.value);
             var salarioAtual = parseFloat(averagePay.value);
             var idade = Number(age.value);
-            
+
             console.log(nome, tempoServiço, salarioAtual, idade)
             /**
              * 3) Crie uma variável para armazenar o abono salarial do funcionário.
@@ -126,9 +126,14 @@
             var abono = 0;
 
             if (tempoServiço > 12)
-                  abono = salarioAtual +10/100;
+            { 
+            abono = salarioAtual * 10 / 100+idade
+            }
 
-            abono += idade;
+            else (tempoServiço <= 12)
+            {
+            abono += idade
+            };
 
             /**
              * 4) Crie uma variável para armazenar o valor do novo salário.
@@ -142,11 +147,28 @@
              *    Use a tabela de referência.
              *    Armazene na variável.
              */
+            var inssContri = 0
+
+            if (novoSalario <= 1500) {
+                inssContri = novoSalario * 5 / 100
+
+            }
+            else if (novoSalario <= 2500) {
+                inssContri = novoSalario * 10 / 100
+            }
+
+            else if (novoSalario <= 3500) {
+                inssContri = novoSalario * 13 / 100
+            }
+            else 
+            {inssContri = novoSalario * 15 / 100}
 
             /**
              * 6) Exiba o valor das variáveis 3, 4 e 5 nos campos 'readonly' do formulário.
-             */allowance.value = abono;
-               
+             */
+            allowance.value = abono;
+            nextPay.value = novoSalario;
+            inss.value = inssContri;
 
             /**
              * 7) Ao clicar no botão [Gerar relatório], execute a 'Função sem nome'.
