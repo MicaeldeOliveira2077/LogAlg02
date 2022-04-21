@@ -1,0 +1,25 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada interativa (Up?)</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Receba um número do usuário e converta para inteiro.
+        let numero = parseInt(prompt(`Digite um número inteiro:`));
+
+        // Loop para gerar o multiplicador que vai de 1 à 10.
+        for (let contador = 1; contador <= 10; contador++) {
+
+            // Exibe no documento HTML.
+            document.write(`${numero} x ${contador} = ${numero * contador}<br>`);
+        }
+
+    </script>
+
+</body>
+
+</html>
